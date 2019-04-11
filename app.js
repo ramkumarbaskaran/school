@@ -13,7 +13,7 @@ try{
 }catch(e){
     throw e;
 }
-console.log(credentials);
+
 // Setup MySQL Connection   
 var connection  = mysql.createConnection(credentials);
 
