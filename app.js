@@ -18,7 +18,13 @@ console.log(credentials);
 var connection  = mysql.createConnection(credentials);
 
 // Connect to MySQL DB
-connection.connect();
+connection.connect(function(err) {
+    if (err) {
+      console.error('error connecting: ' + err.stack);
+      return;
+    }
+    console.log('connected as id ' + connection.threadId);
+});
 
 const con_query = util.promisify(connection.query).bind(connection);
 // configure app to use bodyParser()
