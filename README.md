@@ -18,5 +18,8 @@
 
 3. Import school.sql file
 
+4. npm start  - to start the server
+
+5. npm test - to run test cases
 
 
